@@ -1,14 +1,18 @@
-import React from 'react'
+import React from "react";
 
 export default function Header() {
   return (
     <div>
-       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        
+      <nav class="navbar navbar-expand-md fixed-top navbar-dark header">
         <div class="container">
-        <a class="navbar-brand" href="#">
-              <img src="/assets/logo.png" width="50" class="img-fluid d-md-none" alt="" />
-            </a>
+          <a class="navbar-brand" href="/">
+            <img
+              src="/assets/logo.png"
+              width="50"
+              class="img-fluid d-md-none"
+              alt=""
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -20,26 +24,58 @@ export default function Header() {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          
-          <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">
-              <img src="/assets/logo.png" width="50" class="d-none d-md-block img-fluid" alt="" />
+
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarTogglerDemo01"
+          >
+            <a class="navbar-brand" href="/">
+              <img
+                src="/assets/logo.png"
+                width="50"
+                class="d-none d-md-block img-fluid"
+                alt=""
+              />
             </a>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a class="nav-link active" aria-current="page" href="/">
                   Home
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/about">
                   About
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   Services
                 </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/services">
+                      Travels
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/services">
+                      Logistics
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="services">
+                      Businesses
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
@@ -47,7 +83,7 @@ export default function Header() {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/contact">
                   Contact
                 </a>
               </li>
@@ -56,5 +92,5 @@ export default function Header() {
         </div>
       </nav>
     </div>
-  )
+  );
 }
